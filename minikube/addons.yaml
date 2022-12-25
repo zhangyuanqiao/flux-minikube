@@ -6,6 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   prune: true
+  path: ./applications/todo
   sourceRef:
     kind: GitRepository
     name: todo-app
@@ -21,6 +22,7 @@ metadata:
 spec:
   interval: 1m0s
   prune: true
+  path: ./applications/react
   sourceRef:
     kind: GitRepository
     name: react-app

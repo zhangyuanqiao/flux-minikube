@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   prune: true
-  path: ./applications/react
+  path: ./deploy/manifests
   sourceRef:
     kind: GitRepository
     name: react-app

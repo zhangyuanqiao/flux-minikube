@@ -13,3 +13,19 @@ spec:
     /*
     # include charts directory
     !/deploy/manifests/
+
+---
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: react-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  prune: true
+  path: ./applications/react
+  sourceRef:
+    kind: GitRepository
+    name: react-app
+  targetNamespace: app

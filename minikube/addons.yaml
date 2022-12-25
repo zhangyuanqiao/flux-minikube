@@ -31,3 +31,35 @@ spec:
     /*
     # include charts directory
     !/deploy/manifests/
+
+---
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: todo-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./k8s
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: todo-app
+  targetNamespace: todo
+
+---
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: react-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./deploy/manifests
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: react-app
+  targetNamespace: app

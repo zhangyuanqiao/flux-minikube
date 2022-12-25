@@ -4,7 +4,7 @@ metadata:
   name: todo-app
   namespace: flux-system
 spec:
-  interval: 3m
+  interval: 1m
   url: https://github.com/memoliyasti/todowithflask/
   ref:
     branch: main

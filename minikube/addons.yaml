@@ -4,7 +4,7 @@ metadata:
   name: todo-app
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 1m
   prune: true
   sourceRef:
     kind: GitRepository

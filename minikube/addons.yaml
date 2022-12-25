@@ -4,7 +4,7 @@ metadata:
   name: todo-app
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 3m0s
   path: ./k8s
   prune: true
   sourceRef:
